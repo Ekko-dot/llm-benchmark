@@ -1,0 +1,33 @@
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Performance Test Summary Report                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Basic Information:
+┌───────────────────────┬──────────────────────────────────────────────────────┐
+│ Model                 │ Qwen2.5-7B-Instruct                                  │
+│ Test Dataset          │ random                                               │
+│ API Type              │ openai                                               │
+│ Total Generated       │ 40,960.0 tokens                                      │
+│ Total Test Time       │ 308.24 seconds                                       │
+│ Avg Output Rate       │ 132.88 tokens/sec                                    │
+│ Output Path           │ outputs/20260317_184536/Qwen2.5-7B-Instruct          │
+└───────────────────────┴──────────────────────────────────────────────────────┘
+
+
+                                    Detailed Performance Metrics                                    
+┏━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┓
+┃      ┃      ┃      ┃     Avg ┃     P99 ┃     Avg ┃     P99 ┃     Avg ┃    P99 ┃    Gen. ┃ Success┃
+┃Conc. ┃ Rate ┃  RPS ┃ Lat.(s) ┃ Lat.(s) ┃ TTFT(s) ┃ TTFT(s) ┃ TPOT(s) ┃ TPOT(… ┃  toks/s ┃    Rate┃
+┡━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━┩
+│    1 │  INF │ 0.06 │  15.546 │  15.578 │   0.137 │   0.140 │   0.030 │  0.030 │   32.93 │  100.0%│
+│    5 │  INF │ 0.30 │  16.386 │  16.409 │   0.503 │   0.604 │   0.031 │  0.032 │  156.16 │  100.0%│
+│   10 │  INF │ 0.57 │  17.431 │  17.531 │   0.916 │   1.099 │   0.032 │  0.034 │  293.57 │  100.0%│
+└──────┴──────┴──────┴─────────┴─────────┴─────────┴─────────┴─────────┴────────┴─────────┴────────┘
+
+
+               Best Performance Configuration               
+ Highest RPS         Concurrency 10 (0.57 req/sec)          
+ Lowest Latency      Concurrency 1 (15.546 seconds)         
+
+Performance Recommendations:
+• The system seems not to have reached its performance bottleneck, try higher concurrency

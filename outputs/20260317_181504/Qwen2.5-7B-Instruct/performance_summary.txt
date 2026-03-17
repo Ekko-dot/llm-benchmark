@@ -1,0 +1,34 @@
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Performance Test Summary Report                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Basic Information:
+┌───────────────────────┬──────────────────────────────────────────────────────┐
+│ Model                 │ Qwen2.5-7B-Instruct                                  │
+│ Test Dataset          │ random                                               │
+│ API Type              │ openai                                               │
+│ Total Generated       │ 0.0 tokens                                           │
+│ Total Test Time       │ 0.36 seconds                                         │
+│ Avg Output Rate       │ 0.00 tokens/sec                                      │
+│ Output Path           │ outputs/20260317_181504/Qwen2.5-7B-Instruct          │
+└───────────────────────┴──────────────────────────────────────────────────────┘
+
+
+                                    Detailed Performance Metrics                                    
+┏━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┓
+┃      ┃      ┃       ┃     Avg ┃     P99 ┃     Avg ┃    P99 ┃     Avg ┃    P99 ┃    Gen. ┃ Success┃
+┃Conc. ┃ Rate ┃   RPS ┃ Lat.(s) ┃ Lat.(s) ┃ TTFT(s) ┃ TTFT(… ┃ TPOT(s) ┃ TPOT(… ┃  toks/s ┃    Rate┃
+┡━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━┩
+│    1 │  INF │ -1.00 │   0.360 │   0.360 │   0.000 │  0.000 │  -1.000 │  0.000 │   -1.00 │   10.0%│
+│    5 │  INF │ -1.00 │  -1.000 │     nan │  -1.000 │    nan │  -1.000 │    nan │   -1.00 │    0.0%│
+│   10 │  INF │ -1.00 │  -1.000 │     nan │  -1.000 │    nan │  -1.000 │    nan │   -1.00 │    0.0%│
+└──────┴──────┴───────┴─────────┴─────────┴─────────┴────────┴─────────┴────────┴─────────┴────────┘
+
+
+               Best Performance Configuration               
+ Highest RPS         Concurrency 1 (-1.00 req/sec)          
+ Lowest Latency      Concurrency 5 (-1.000 seconds)         
+
+Performance Recommendations:
+• Consider lowering concurrency, current load may be too high
+• Success rate is low at high concurrency, check system resources or reduce concurrency

@@ -177,3 +177,11 @@ output/
 
 # Logs
 *.log
+
+# Local environment
+.agents/
+.local/
+.qoder/
+.qwen/
+models/
+translation-eval/
